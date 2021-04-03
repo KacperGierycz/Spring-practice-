@@ -2,6 +2,55 @@ package exercise;
 
 public class Practice {
 	
+	
+	  // Complete the hourglassSum function below.
+    static int hourglassSum(int[][] arr) {
+        
+    	 int iS=arr.length;
+         int jS=arr[1].length;
+         int hiestH=0;
+         
+         for (int i=0; i<iS-2; i++){
+            int curH=0;
+         for (int j=0; j<jS-2; j++){
+            curH=arr[i][j]+arr[i][j+1]+arr[i][j+2]+
+             arr[i+1][j+1]+
+             arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2];
+             if (hiestH<curH){
+                 hiestH=curH;
+             }
+         }
+         }
+		return hiestH;
+
+
+    }
+    
+    // Complete the rotLeft function below.
+    static int[] rotLeft(int[] a, int d) {
+        
+        int sizeA=a.length;
+        int[] prefixA=new int[d];
+        int[] solution=new int[sizeA];
+        
+      //  prefixA=a.substring(0,d-1);
+        for (int i=0;i<d;i++){
+            prefixA[i]=a[i];
+        }
+        
+        for (int j=0;j<sizeA;j++){
+            solution[j]=a[j+(d-1)];
+        }
+        
+        for (int k=0;k<prefixA.lenght;k++){
+            solution[sizeA-d+k]=prefix[A];
+        }
+        
+     //   return solution=a.substring(d-1,sizeA-1)+prefixA;
+        
+        return solution;
+    }
+	
 
 
 	    // Complete the repeatedString function below.
